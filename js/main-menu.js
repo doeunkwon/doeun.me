@@ -13,6 +13,7 @@ class MainMenu extends HTMLElement {
         <a href="projects.html" style="display:inline; margin-right:15px">Projects</a>
         <a href="writing.html" style="display:inline; margin-right:15px">Writing</a>
         <a href="learn.html" style="display:inline; margin-right:15px">Learn</a>
+        <a href="Doeun Kwon (2022 Resume).pdf" style="display:inline; margin-right:15px" target="_blank">Resume</a>
         </p>
       </div>
 		`;
