@@ -12,7 +12,6 @@ class BlogMenu extends HTMLElement {
         <a href="../about.html" style="display:inline; margin-right:15px">About</a>
         <a href="../projects.html" style="display:inline; margin-right:15px">Projects</a>
         <a href="../writing.html" style="display:inline; margin-right:15px">Writing</a>
-        <a href="../learn.html" style="display:inline; margin-right:15px">Learn</a>
         <a href="../resume.pdf" style="display:inline; margin-right:15px" target="_blank">Resume</a>
         </p>
       </div>
