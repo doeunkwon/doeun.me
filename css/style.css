@@ -30,13 +30,11 @@ h6 {
 
 p {
   font-family: 'Nunito', sans-serif;
-  font-weight: 300;
   color: black;
 }
 
 b {
   font-family: 'Nunito', sans-serif;
-  font-weight: 500;
 }
 
 img {
@@ -50,13 +48,11 @@ body {
 
 li {
   font-family: 'Nunito', sans-serif;
-  font-weight: 300;
   color: black
 }
 
 ul {
     font-family: 'Nunito', sans-serif;
-    font-weight: 300;
     padding-left:13px;
     text-align: center;
     list-style: none;
