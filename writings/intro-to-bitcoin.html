@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Intro to Bitcoin • Doeun Kwon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <script src="../js/blog-menu.js"></script>
+  <body>
+    <div class="content-wrapper">
+
+      <div class="content">
+
+        <p>
+        <a href="../about.html" style="display:inline; margin-right:15px">About</a>
+        <a href="../projects.html" style="display:inline; margin-right:15px">Projects</a>
+        <a href="../writings.html" style="display:inline; margin-right:15px; border-bottom: 1px solid #000; padding-bottom: 0.5px">Writings</a>
+        </p>
+
+        <p style="font-size:350%">⚡️</p>
+
+        <h1 style="margin-bottom:45px">Intro to Bitcoin</h1>
+
+        <div style="margin-bottom:45px">
+          <h2>Money, Governance, & Power</h2>
+
+          <p>
+            We live in an era of digitization. This transition gives people
+            greater control over their digital assets since these modern assets
+            are programmable data types. Of
+            all asset classes, the one currently
+            experiencing the greatest shift is perhaps <i>fiat currency</i>. The
+            ideal electronic cash is superior to fiat because it is a data type
+            that is faster, cheaper, and easier to transfer, while being more
+            durable, trackable, and theft-resistant.
+          </p>
+
+          <p>
+            The US government is powerful because it controls the
+            supply of the US dollar, which further controls many aspects of society.
+            Money may be the most influential layer of the societal stack and the
+            government uses money as a tool to manipulate the status of the
+            economy. Consider the consequences of the US government establishing and
+            regulating its own digital currency - that is, a superior, programmable, USD.
+            The control of a widely adopted digital currency gives access to an
+            inconceivable amount of data, privacy, and power.
+          </p>
+        </div>
+
+        <div style="margin-bottom:45px">
+          <h2>Decentralized Electronic Cash</h2>
+
+          <p>
+            <a style="border-bottom: 1px solid #000; padding-bottom: 0.5px" href="https://bitcoin.org/en/" target="_blank">Bitcoin</a>
+            presents itself as a purely peer-to-peer electronic cash
+            system that is governed by its users rather than a central authority. This
+            decentralization of money addresses a fundamental problem that is
+            unique to digital cash known as the
+            <a style="border-bottom: 1px solid #000; padding-bottom: 0.5px" href="https://en.wikipedia.org/wiki/Double-spending" target="_blank">double-spending problem</a>.
+            Since digital cash is simply electronic data, it's at risk of being
+            exactly replicated and double-spent. This is the reason why previous
+            attempts at a peer-to-peer electronic cash system required an
+            intermediary of some sort - usually a financial institution - to
+            prevent double-spending. The inclusion of an intermediary meant that
+            these systems were centralized.
+          </p>
+
+          <div style="margin-top:30px; margin-bottom:30px">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">25/ So back to constitutional rights:<br><br>✅You have constitutional rights<br>✅You need money to exercise them<br>✅The state acquires the power to cut off funding<br><br>What might happen next?<br><br>I know what happens: &quot;all of 6529 frens think he is overreacting&quot;</p>&mdash; 6529 (@punk6529) <a href="https://twitter.com/punk6529/status/1494445212835405836?ref_src=twsrc%5Etfw">February 17, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
+          <p>
+            The more centralized money is, the more power the
+            central authority accrues. This is what drives the desire and need
+            for a decentralized electronic cash system. It's about
+            distributing the power from the grip of a select few to the
+            hands of the common people. This is the intuition behind the <i>why</i>
+            of Bitcoin. The <i>how</i> of Bitcoin requires some further thought. The
+            <a style="border-bottom: 1px solid #000; padding-bottom: 0.5px" href="https://bitcoin.org/bitcoin.pdf" target="_blank">white paper</a>
+            goes in-depth and explains the process, but I'll attempt to summarize
+            the two important underlying concepts of Bitcoin: the solution to the
+            double-spending problem, and
+            <a style="border-bottom: 1px solid #000; padding-bottom: 0.5px" href="https://en.wikipedia.org/wiki/Proof_of_work" target="_blank">Proof of Work</a>.
+            But first, we must address the field of
+            cryptography.
+          </p>
+        </div>
+
+        <div style="margin-bottom:45px">
+          <h2>Key Pairs & SHA-256</h2>
+
+          <p>
+            Bitcoin makes use of two concepts from cryptography: <a style="border-bottom: 1px solid #000; padding-bottom: 0.5px" href="https://en.wikipedia.org/wiki/Public-key_cryptography" target="_blank">public/private key pairs</a>
+            and <a style="border-bottom: 1px solid #000; padding-bottom: 0.5px" href="https://en.wikipedia.org/wiki/Cryptographic_hash_function" target="_blank">cryptographic hash functions</a>.
+          </p>
+
+          <p>
+            Every bitcoin owner is issued a public key with an associated
+            private key. The private key is used to digitally sign transactions,
+            such as sending or receiving bitcoin, and the public key is used to
+            verify those transactions. It makes sense that the private key should be
+            <i>private</i> information since it can authorize the transfer of
+            important assets. The public key should be <i>public</i> information so that
+            anyone who is a part of the decentralized network may verify
+            that a transaction is legit.
+          </p>
+
+          <p>
+            A cryptographic hash function takes an arbitrary length of data input
+            and produces a fixed-length output of bits called a
+            <i>hash</i>. In the case of Bitcoin, a specific cryptographic hash
+            function called SHA-256 is utilized and it
+            outputs a value that is always 256 bits long. The purpose of a
+            cryptographic hash function is to take some arbitrary data and form
+            a concise identifier that is effectively unique to that piece of input
+            data.
+          </p>
+        </div>
+
+        <div style="margin-bottom:45px">
+          <h2>Transactions</h2>
+
+          <p>
+            An electronic coin represents a chain of digital signatures. Suppose
+            that in the past, <i>owner1</i> sent 1 BTC to <i>owner2</i>, and
+            now, <i>owner2</i> decides to send that same 1 BTC to <i>owner3</i>
+            such that
+          </p>
+
+          <p>
+            <i>owner1</i> → <i>owner2</i> → <i>owner3</i>
+          </p>
+
+          <p>
+            represents the sequential owner history of that 1 BTC. The following
+            events occur when <i>owner2</i> initiates the transfer of her
+            cryptoasset to <i>owner3</i>. First,
+            a new hash is formed such that
+          </p>
+
+          <p>
+            <i>new_hash</i> = sha256(<i>pre_Tx</i>, <i>payee_public_key</i>)
+          </p>
+
+          <p>
+            where <i>pre_Tx</i> is the data of
+            the previous transaction (<i>owner1</i> → <i>owner2</i>) and the <i>payee_public_key</i>
+            is the public key of <i>owner3</i>. The <i>new_hash</i> serves as a compact, unique,
+            identifier for the newly initiated transaction (<i>owner2</i> → <i>owner3</i>).
+            To authorize this transaction, the payer,
+            <i>owner2</i> in this case, digitally signs the <i>new_hash</i> using
+            her private key such that
+          </p>
+
+          <p>
+            <i>signature</i> = sign(<i>payer_private_key</i>, <i>new_hash</i>).
+          </p>
+
+          <p>
+            Then, <i>owner3</i> can verify the chain of ownership of that 1 BTC using
+            the public key of <i>owner2</i> such that
+          </p>
+
+          <p>
+            <i>verification</i> = verify(<i>payer_public_key</i>, <i>new_hash</i>).
+          </p>
+
+          <p>
+            Once signed,
+            each transaction is broadcasted to the Bitcoin network where
+            nodes (computers contributing their power to the network) are actively
+            collecting the transactional data. The way double-spending is avoided is
+            by the majority of nodes agreeing to accept only the first broadcasted
+            transaction and ignoring any later attempts to double-spend.
+          </p>
+
+          <p>
+            As mentioned,
+            an electronic coin represents a chain of digital signatures. As soon as
+            the payer signs a single transaction, that transaction is broadcasted
+            to the public and engrained in the chronological chain of the electronic
+            coin, which now belongs to a new owner. So any later attempts by the
+            payer to sign another transaction
+            with the replicated electronic coin will be rejected by the network since
+            the majority of nodes have agreed that the electronic coin now belongs
+            to a different owner.
+          </p>
+        </div>
+
+        <div style="margin-bottom:45px">
+          <h2>Proof of Work</h2>
+
+          <p>
+            But how does the network decide on which transaction to accept first?
+            The solution that Bitcoin proposes is to first group the transactions
+            into timestamped blocks, then chain these blocks in chronological
+            order in a way that it is immutable. This occurs by a process known
+            as <a style="border-bottom: 1px solid #000; padding-bottom: 0.5px" href="https://en.bitcoin.it/wiki/Mining" target="_blank">mining</a>.
+            Here's how it works.
+          </p>
+
+          <p>
+            Bitcoin initiates PoW (Proof of Work) by setting a target hash value,
+            say <i>target_hash</i>,
+            which is a 256-bit output starting with a specific number of zeros.
+            Then, miners <i>mine</i> a new block such that
+          </p>
+
+          <p>
+            <i>new_block</i> = block(<i>pre_hash</i>, <i>nonce</i>, List&lt;Tx&gt;)
+          </p>
+
+          <p>
+            where <i>pre_hash</i> is the hash of the previous block, <i>nonce</i>
+            is some arbitrary, adjustable, value, and List&lt;Tx&gt; is a list of transactions.
+            The goal of the miners' is to increment the value of the <i>nonce</i>
+            so that
+          </p>
+
+          <p>
+            sha256(<i>new_block</i>) == <i>target_hash</i>.
+          </p>
+
+          <p>
+            SHA-256 is an effective encryption
+            mechanism because for any input, the unique output is completely unpredictable.
+            That is, it is infeasible to find the input given the output of a
+            SHA-256 function. As a result, finding the correct value of the <i>new_block</i>
+            is computationally intensive since there's no better way to find it
+            than to guess and check input values until one of them outputs the
+            <i>target_hash</i>. But the idea is that it's easy to verify that
+            the correct value of the <i>new_block</i> has been found. We just have
+            to input it into the SHA-256 function and check to see that it outputs
+            the <i>target_hash</i>.
+          </p>
+
+          <p>
+            This way of having an intense authentication step followed by a
+            trivial verifaction step is by design. This means that a block cannot
+            be changed without redoing the computational work for the block and all
+            the following blocks since they each have chained information from the
+            block before it. However, anyone can quickly verify the work put into
+            authenticating a blockchain.
+          </p>
+
+          <p>
+            By convention, the Bitcoin network accepts the chain of blocks, or blockchain,
+            that has the most computational work put into it and that's simply
+            the longest one. So if an attacker tries to infiltrate the network with
+            his own version of the blockchain, unless he has over 50% of the
+            computing power of the entire Bitcoin network, statistically speaking,
+            the chances of him forming the longest blockchain is extremely low.
+          </p>
+
+          <p>
+            The specific number of zeros of the <i>target_hash</i> changes periodically
+            so that, on average, a new block is mined every 10 minutes. Since they
+            provide the computing power, the miners are rewarded by the network in
+            BTC. This is how new BTC is created or mined. At the time of this writing, the
+            current circulating supply is about 18,915,618 BTC. Eventually,
+            this number will be capped at 21,000,000 BTC, which then miners will
+            be rewarded in fees paid by the users of the network.
+          </p>
+
+          <p>
+            This is Proof of Work. It's a way of authenticating, or proving, a
+            blockchain through computational work. This is what allows transactions
+            to be in chronological order, helping to solve the double-spending
+            problem.
+          </p>
+
+          <div style="margin-top:30px">
+            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">People are understanding that <a href="https://twitter.com/hashtag/bitcoin?src=hash&amp;ref_src=twsrc%5Etfw">#bitcoin</a>&#39;s major proposition is its conservatism; that it will not change in a world that&#39;s changing at an accelerating rate.<br><br>Conservatism is materially diff from any other <a href="https://twitter.com/hashtag/cryptoasset?src=hash&amp;ref_src=twsrc%5Etfw">#cryptoasset</a>&#39;s value add. <br><br>(s/o <a href="https://twitter.com/yassineARK?ref_src=twsrc%5Etfw">@yassineARK</a> <a href="https://twitter.com/wintonARK?ref_src=twsrc%5Etfw">@wintonARK</a> for this framing)</p>&mdash; Chris Burniske (@cburniske) <a href="https://twitter.com/cburniske/status/1490893494260355073?ref_src=twsrc%5Etfw">February 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+        </div>
+
+        <div>
+          <h2>Network</h2>
+
+          <p>
+            Here's the general description of the Bitcoin protocol directly from
+            the white paper:
+            <ol>
+              <li>New transactions are broadcast to all nodes</li>
+              <li>Each node collects new transactions into a block</li>
+              <li>Each node works on finding a difficult proof-of-work for its block</li>
+              <li>When a node finds a proof-of-work, it broadcasts the block to all nodes</li>
+              <li>Nodes accept the block only if all transactions in it are valid and not already spent</li>
+              <li>Nodes express their acceptance of the block by working on creating the next block in the chain, using the hash of the accepted block as the previous hash</li>
+            </ol>
+          </p>
+        </div>
+
+        <br><br>
+
+      </div>
+
+    </div>
+  </body>
+</html>
