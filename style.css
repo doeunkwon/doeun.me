@@ -1,0 +1,13 @@
+.container-content {
+  padding-left: 3%
+}
+
+.container-menu {
+  float: left;
+  margin-right: 10%;
+}
+
+.container-body {
+  width: 500px;
+  float: left
+}
