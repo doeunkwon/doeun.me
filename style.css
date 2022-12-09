@@ -22,8 +22,12 @@
 }
 
 a {
-  color: #73777B;
+  color: #959595;
   text-decoration: none;
+}
+
+a:hover {
+  color: #626262
 }
 
 p {
