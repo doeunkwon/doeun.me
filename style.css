@@ -16,9 +16,11 @@
 }
 
 .container-body {
+  padding: 0;
   float: left;
   margin-right: auto;
-  max-width: 500px;
+  margin-bottom: 3%;
+  max-width: 580px;
 }
 
 a {
