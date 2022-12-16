@@ -1,6 +1,5 @@
 .container-content {
   padding: 7%;
-  padding-top: 2%;
   font-family: sans-serif;
 }
 
@@ -45,6 +44,7 @@ p {
 .img-pop {
   max-width: 100%;
   transition: transform 0.4s;
+  padding: 30px;
 }
 
 .img-pop:hover {
@@ -56,14 +56,21 @@ p {
 .navbar {
   left: 0;
   overflow: hidden;
-  position: fixed;
-  top: 20px;
-  width: 100%;
-  text-align: center;
-  font-size: 16px;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
 }
 
+/* Style the links inside the navigation bar */
 .navbar a {
-  display: inline-block;
-  width: 16%;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Add an equal width for each link */
+.navbar a {
+  width: 13%; /* Equal width for each link */
 }
