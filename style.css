@@ -55,7 +55,7 @@ p {
 .navbar {
   width: 100%;
   position: fixed; /* Make the navbar stay at the top of the screen */
-  top: 0;
+  top: 2%;
   left: 0;
   display: flex; /* Use flexbox to evenly space out the links */
   justify-content: space-around; /* Evenly space out the links horizontally */
@@ -66,28 +66,4 @@ p {
 /* Style the links */
 .navbar a {
   text-decoration: none;
-}
-
-
-
-.navbar {
-  left: 0;
-  overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-}
-
-/* Style the links inside the navigation bar */
-.navbar a {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Add an equal width for each link */
-.navbar a {
-  width: 13%; /* Equal width for each link */
 }
