@@ -51,6 +51,23 @@ p {
   transform: scale(1.03);
 }
 
+/* Style the navbar */
+.navbar {
+  width: 100%;
+  position: fixed; /* Make the navbar stay at the top of the screen */
+  top: 0;
+  left: 0;
+  display: flex; /* Use flexbox to evenly space out the links */
+  justify-content: space-around; /* Evenly space out the links horizontally */
+  align-items: center; /* Vertically center the links */
+  z-index: 2; /* Make sure the navbar stays on top of other elements */
+}
+
+/* Style the links */
+.navbar a {
+  text-decoration: none;
+}
+
 
 
 .navbar {
