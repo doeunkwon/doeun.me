@@ -18,7 +18,7 @@
 a {
   color: #959595;
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 a:hover {
@@ -43,12 +43,12 @@ p {
 
 .img-pop {
   max-width: 100%;
-  transition: transform 0.4s;
+  transition: transform 0.1s;
   padding: 30px;
 }
 
 .img-pop:hover {
-  transform: scale(1.03);
+  transform: scale(1.015);
 }
 
 /* Style the navbar */
