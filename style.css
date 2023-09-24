@@ -3,8 +3,6 @@
   font-family: sans-serif;
 }
 
-
-
 .container-body {
   margin-top: 70px;
   padding: 0;
@@ -12,8 +10,6 @@
   margin-left: auto;
   max-width: 700px;
 }
-
-
 
 a {
   color: #959595;
@@ -25,14 +21,10 @@ a:hover {
   color: black
 }
 
-
-
 p {
   text-align: center;
   line-height: 22px
 }
-
-
 
 .img-center {
   display: block;
