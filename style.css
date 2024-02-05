@@ -1,22 +1,22 @@
 .container-content {
-  padding: 7%;
   font-family: sans-serif;
 }
 
 .container-body {
-  padding-top: 10px;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 a {
-  color: #959595;
+  color: #f2f2f2;
   text-decoration: none;
   transition: 0.2s;
 }
 
 a:hover {
-  color: blue;
+  color: skyblue;
 }
 
 p {
