@@ -1,9 +1,10 @@
 .container-content {
-  font-family: sans-serif;
+  font-family: "Press Start 2P", sans-serif;
 }
 
 .container-body {
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -21,28 +22,13 @@ a:hover {
 
 p {
   text-align: center;
-  line-height: 25px;
-}
-
-.img-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.img-pop {
-  max-width: 100%;
-  transition: transform 0.5s;
-  padding: 30px;
-}
-
-.img-pop:hover {
-  transform: scale(1.05);
+  line-height: 50px;
+  font-size: 24px;
 }
 
 /* Style the navbar */
 .navbar {
+  padding-top: 20px;
   width: 100%;
   position: fixed; /* Make the navbar stay at the top of the screen */
   top: 2%;
@@ -51,6 +37,7 @@ p {
   justify-content: space-around; /* Evenly space out the links horizontally */
   align-items: center; /* Vertically center the links */
   z-index: 2; /* Make sure the navbar stays on top of other elements */
+  font-size: 18px;
 }
 
 /* Style the links */
