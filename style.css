@@ -4,11 +4,9 @@
 }
 
 .container-body {
-  margin-top: 70px;
-  padding: 0;
+  padding-top: 10px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 700px;
 }
 
 a {
@@ -18,12 +16,12 @@ a {
 }
 
 a:hover {
-  color: black
+  color: blue;
 }
 
 p {
   text-align: center;
-  line-height: 22px
+  line-height: 25px;
 }
 
 .img-center {
@@ -35,12 +33,12 @@ p {
 
 .img-pop {
   max-width: 100%;
-  transition: transform 0.1s;
+  transition: transform 0.5s;
   padding: 30px;
 }
 
 .img-pop:hover {
-  transform: scale(1.015);
+  transform: scale(1.05);
 }
 
 /* Style the navbar */
