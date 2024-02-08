@@ -1,18 +1,60 @@
+body,
+html {
+  height: 100%; /* Ensure the body takes up full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
 .container-content {
   font-family: "Press Start 2P", sans-serif;
+  height: 100%;
 }
 
 .container-body {
+  display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+}
+
+.earth-container {
   display: flex;
-  height: 96vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.play-button,
+.control-button {
+  position: absolute;
+  height: 30px; /* Example height, adjust as needed */
+}
+
+#prevButton {
+  left: calc(50% - 100px); /* Adjust distance from center */
+}
+
+#nextButton {
+  right: calc(50% - 100px); /* Adjust distance from center */
+}
+
+.earth-gif {
+  max-height: 100vh; /* Make Earth GIF fit the viewport height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.play-button {
+  position: absolute;
+  height: 50px;
+  /* The button will automatically center because of the flex settings on the container */
+}
+
+audio {
+  display: block; /* Treat audio tag as a block element for proper centering */
 }
 
 a {
   color: #f2f2f2;
   text-decoration: none;
-  transition: 0.16s;
 }
 
 a:hover {
@@ -37,9 +79,4 @@ p {
   align-items: center;
   z-index: 2;
   font-size: 16px;
-}
-
-/* Style the links */
-.navbar a {
-  text-decoration: none;
 }
