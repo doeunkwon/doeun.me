@@ -1,82 +1,90 @@
 body,
 html {
-  height: 100%; /* Ensure the body takes up full viewport height */
-  margin: 0; /* Remove default margin */
+  height: 100%;
+  margin: 0;
+  background-color: black; /* Ensures any space outside the earth-container matches the background */
 }
 
 .container-content {
   font-family: "Press Start 2P", sans-serif;
   height: 100%;
-}
-
-.container-body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  align-items: center; /* Centers the earth-container vertically and horizontally */
 }
 
 .earth-container {
+  position: relative;
+  width: 100%; /* Use 100% of the .container-content width */
+  height: 100vh; /* Adjust based on your design, this takes the full viewport height */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-.play-button,
-.control-button {
-  position: absolute;
-  height: 30px; /* Example height, adjust as needed */
-}
-
-#prevButton {
-  left: calc(50% - 100px); /* Adjust distance from center */
-}
-
-#nextButton {
-  right: calc(50% - 100px); /* Adjust distance from center */
 }
 
 .earth-gif {
-  max-height: 100vh; /* Make Earth GIF fit the viewport height */
-  width: auto; /* Maintain aspect ratio */
-}
-
-.play-button {
   position: absolute;
-  height: 50px;
-  /* The button will automatically center because of the flex settings on the container */
+  top: 0;
+  height: 100%;
+  object-fit: cover; /* Cover the container without stretching */
+  z-index: 0; /* Ensure it stays as the background */
 }
 
-audio {
-  display: block; /* Treat audio tag as a block element for proper centering */
+.info-and-controls {
+  position: relative; /* Centering the content inside the earth-container */
+  display: flex;
+  flex-direction: column; /* Stack the artist, controls, and track title vertically */
+  align-items: center; /* Center align the child elements */
+  z-index: 1; /* Ensure it's above the background GIF */
 }
 
-a {
-  color: #f2f2f2;
-  text-decoration: none;
+.track-info.artist,
+.track-info.track {
+  color: white;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: medium;
+  text-align: center;
+  margin: 28px 0;
 }
 
-a:hover {
-  color: skyblue;
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 64px; /* Space between control buttons */
+}
+
+.control-button,
+.play-button {
+  cursor: pointer;
+  height: 50px; /* Example size, adjust as needed */
+}
+
+.navbar {
+  padding: 16px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 2; /* Ensures navbar is always on top */
+  color: white;
+  font-size: medium;
 }
 
 p {
   text-align: center;
   line-height: 64px;
-  font-size: 32px;
-  color: #f2f2f2;
+  font-size: xx-large;
+  color: white;
+  text-decoration: none;
 }
 
-.navbar {
-  padding-top: 16px;
-  width: 100%;
-  position: fixed;
-  top: 2%;
-  left: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 2;
-  font-size: 16px;
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: skyblue;
 }

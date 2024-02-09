@@ -16,34 +16,33 @@
         <a style="color: skyblue" href="index.html">playlist</a>
         <a href="contact.html">contact</a>
       </div>
-      <div class="container-body">
-        <div class="earth-container">
-          <img
-            src="assets/images/earth.gif"
-            alt="Earth GIF"
-            class="earth-gif"
-            id="earthImage"
-          />
-          <img
-            src="assets/images/left.png"
-            alt="Previous Track"
-            class="control-button"
-            id="prevButton"
-          />
-          <img
-            src="assets/images/play.png"
-            alt="Play button"
-            class="play-button"
-            id="playButton"
-          />
-          <img
-            src="assets/images/right.png"
-            alt="Next Track"
-            class="control-button"
-            id="nextButton"
-          />
-          <audio id="audioPlayer"></audio>
+      <div class="earth-container">
+        <img src="assets/images/earth.gif" alt="Earth GIF" class="earth-gif" />
+        <div class="info-and-controls">
+          <div id="artistName" class="track-info artist"></div>
+          <div class="controls">
+            <img
+              src="assets/images/left.png"
+              alt="Previous Track"
+              class="control-button"
+              id="prevButton"
+            />
+            <img
+              src="assets/images/play.png"
+              alt="Play button"
+              class="play-button"
+              id="playButton"
+            />
+            <img
+              src="assets/images/right.png"
+              alt="Next Track"
+              class="control-button"
+              id="nextButton"
+            />
+          </div>
+          <div id="trackTitle" class="track-info track"></div>
         </div>
+        <audio id="audioPlayer"></audio>
       </div>
     </div>
     <script src="index.js"></script>

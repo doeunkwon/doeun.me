@@ -8,7 +8,6 @@ var playlist = [
   "assets/playlist/Tiesto - Secrets.mp3",
   "assets/playlist/Airbase - Escape - Radio Edit.mp3",
   "assets/playlist/Tinlicker - Lost - Edit.mp3",
-  "assets/playlist/Andrew Royal, Robbie Seed, Jimmy Chou, That Girl - I Wish.mp3",
   "assets/playlist/Calvin Harris, Ellie Goulding - Miracle (with Ellie Goulding).mp3",
   "assets/playlist/Tinlicker - Hide U - Tinlicker Remix.mp3",
   "assets/playlist/Tinlicker - Fractal.mp3",
@@ -16,7 +15,7 @@ var playlist = [
   "assets/playlist/Tinlicker - Close Your Eyes.mp3",
   "assets/playlist/Fejka, Marie Angerer - Infinity (feat. Marie Angerer).mp3",
   "assets/playlist/Fred again - Kammy (like i do).mp3",
-  "assets/playlist/Gareth Emery- Friendly Fires.mp3",
+  "assets/playlist/Gareth Emery - Friendly Fires.mp3",
   "assets/playlist/INZO - Drift Like A Cloud, Flow Like Water.mp3",
   "assets/playlist/Kudus, Mirjam Tumaini - Never Be Alone.mp3",
   "assets/playlist/Tinlicker - Children.mp3",
@@ -27,20 +26,54 @@ var playlist = [
 ];
 var currentTrack = 0;
 var audioPlayer = document.getElementById("audioPlayer");
-var playButton = document.getElementById("playButton");
-var prevButton = document.getElementById("prevButton");
-var nextButton = document.getElementById("nextButton");
+var controlElements = [
+  document.getElementById("artistName"),
+  document.getElementById("prevButton"),
+  document.getElementById("playButton"),
+  document.getElementById("nextButton"),
+  document.getElementById("trackTitle"),
+];
 audioPlayer.volume = 0.2;
 
 function changeTrack(trackIndex) {
   audioPlayer.src = playlist[trackIndex];
   audioPlayer.play();
   playButton.src = "assets/images/pause.png";
+
+  var trackDetails = playlist[trackIndex].split("/")[2];
+  var artistName = trackDetails.split(" - ")[0];
+  var trackTitle = trackDetails.split(" - ")[1].split(".mp3")[0];
+
+  document.getElementById("artistName").textContent = artistName;
+  document.getElementById("trackTitle").textContent = trackTitle;
+  setOpacity(1); // Make controls visible
+
+  // Hide controls after 3 seconds
+  clearTimeout(window.fadeTimer);
+  window.fadeTimer = setTimeout(function () {
+    setOpacity(0);
+  }, 3000);
 }
+
+function setOpacity(opacity) {
+  controlElements.forEach(function (element) {
+    element.style.opacity = opacity.toString();
+  });
+}
+
+document.addEventListener("mousemove", function () {
+  setOpacity(1); // Make controls visible on mouse move
+
+  // Reset the timer to hide controls after 3 seconds
+  clearTimeout(window.fadeTimer);
+  window.fadeTimer = setTimeout(function () {
+    setOpacity(0);
+  }, 3000);
+});
 
 playButton.addEventListener("click", function () {
   if (audioPlayer.paused) {
-    if (audioPlayer.src === "") {
+    if (!audioPlayer.src) {
       changeTrack(currentTrack);
     } else {
       audioPlayer.play();
@@ -57,13 +90,11 @@ audioPlayer.addEventListener("ended", function () {
   changeTrack(currentTrack);
 });
 
-// Skip to the next track
 nextButton.addEventListener("click", function () {
   currentTrack = (currentTrack + 1) % playlist.length;
   changeTrack(currentTrack);
 });
 
-// Go to the previous track
 prevButton.addEventListener("click", function () {
   currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
   changeTrack(currentTrack);
