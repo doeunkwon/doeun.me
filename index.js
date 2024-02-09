@@ -1,101 +1,102 @@
 var playlist = [
-  "assets/playlist/Alessandro Pierozzi - World Of Sound.mp3",
-  "assets/playlist/Maur - Deep Inside.mp3",
-  "assets/playlist/Tinlicker - Breezeblocks - Tinlicker Remix.mp3",
-  "assets/playlist/Cosmic Gate, Diana Miro - Hear Me Out.mp3",
-  "assets/playlist/INZO - Overthinker.mp3",
-  "assets/playlist/Tinlicker - Lost Gravity.mp3",
-  "assets/playlist/Tiesto - Secrets.mp3",
-  "assets/playlist/Airbase - Escape - Radio Edit.mp3",
-  "assets/playlist/Tinlicker - Lost - Edit.mp3",
-  "assets/playlist/Calvin Harris, Ellie Goulding - Miracle (with Ellie Goulding).mp3",
-  "assets/playlist/Tinlicker - Hide U - Tinlicker Remix.mp3",
-  "assets/playlist/Tinlicker - Fractal.mp3",
-  "assets/playlist/Fred again - Bleu (better with time).mp3",
-  "assets/playlist/Tinlicker - Close Your Eyes.mp3",
-  "assets/playlist/Fejka, Marie Angerer - Infinity (feat. Marie Angerer).mp3",
-  "assets/playlist/Fred again - Kammy (like i do).mp3",
-  "assets/playlist/Gareth Emery - Friendly Fires.mp3",
-  "assets/playlist/INZO - Drift Like A Cloud, Flow Like Water.mp3",
-  "assets/playlist/Kudus, Mirjam Tumaini - Never Be Alone.mp3",
-  "assets/playlist/Tinlicker - Children.mp3",
-  "assets/playlist/Robert Miles, Jaques Le Noir - Princess Of Light - Jaques Le Noir Edit Remix.mp3",
-  "assets/playlist/RSCL, Repiet, Julia Klejin - Echo.mp3",
-  "assets/playlist/Stevie Krash, Al Sharif - The Way (ABGT471).mp3",
-  "assets/playlist/Tiesto - Drifting.mp3",
+  "assets/music/Alessandro Pierozzi -- World Of Sound.mp3",
+  "assets/music/Maur -- Deep Inside.mp3",
+  "assets/music/Tinlicker -- Breezeblocks - Tinlicker Remix.mp3",
+  "assets/music/Cosmic Gate, Diana Miro -- Hear Me Out.mp3",
+  "assets/music/INZO -- Overthinker.mp3",
+  "assets/music/Tinlicker -- Lost Gravity.mp3",
+  "assets/music/Tiesto -- Secrets.mp3",
+  "assets/music/Airbase -- Escape - Radio Edit.mp3",
+  "assets/music/Tinlicker -- Lost - Edit.mp3",
+  "assets/music/Calvin Harris, Ellie Goulding -- Miracle (with Ellie Goulding).mp3",
+  "assets/music/Tinlicker -- Hide U - Tinlicker Remix.mp3",
+  "assets/music/Tinlicker -- Fractal.mp3",
+  "assets/music/Fred again -- Bleu (better with time).mp3",
+  "assets/music/Tinlicker -- Close Your Eyes.mp3",
+  "assets/music/Fejka, Marie Angerer -- Infinity (feat. Marie Angerer).mp3",
+  "assets/music/Fred again -- Kammy (like i do).mp3",
+  "assets/music/Gareth Emery -- Friendly Fires.mp3",
+  "assets/music/INZO -- Drift Like A Cloud, Flow Like Water.mp3",
+  "assets/music/Kudus, Mirjam Tumaini -- Never Be Alone.mp3",
+  "assets/music/Tinlicker -- Children.mp3",
+  "assets/music/Robert Miles, Jaques Le Noir -- Princess Of Light - Jaques Le Noir Edit Remix.mp3",
+  "assets/music/RSCL, Repiet, Julia Klejin -- Echo.mp3",
+  "assets/music/Stevie Krash, Al Sharif -- The Way (ABGT471).mp3",
+  "assets/music/Tiesto -- Drifting.mp3",
 ];
-var currentTrack = 0;
-var audioPlayer = document.getElementById("audioPlayer");
-var controlElements = [
-  document.getElementById("artistName"),
-  document.getElementById("prevButton"),
-  document.getElementById("playButton"),
-  document.getElementById("nextButton"),
-  document.getElementById("trackTitle"),
-];
+
+let currentTrack = 0;
+const audioPlayer = document.getElementById("audioPlayer");
+const playButton = document.getElementById("playButton");
+const controlElements = [
+  "artistName",
+  "prevButton",
+  "playButton",
+  "nextButton",
+  "trackTitle",
+  "navbar",
+].map((id) => document.getElementById(id));
+
 audioPlayer.volume = 0.2;
 
-function changeTrack(trackIndex) {
-  audioPlayer.src = playlist[trackIndex];
-  audioPlayer.play();
-  playButton.src = "assets/images/pause.png";
-
-  var trackDetails = playlist[trackIndex].split("/")[2];
-  var artistName = trackDetails.split(" - ")[0];
-  var trackTitle = trackDetails.split(" - ")[1].split(".mp3")[0];
+const updateUI = (trackIndex) => {
+  const trackDetails = playlist[trackIndex].split("/")[2];
+  const [artistName, trackTitle] = trackDetails
+    .split(" -- ")
+    .map((part) => part.split(".mp3")[0]);
 
   document.getElementById("artistName").textContent = artistName;
   document.getElementById("trackTitle").textContent = trackTitle;
-  setOpacity(1); // Make controls visible
+};
 
-  // Hide controls after 3 seconds
-  clearTimeout(window.fadeTimer);
-  window.fadeTimer = setTimeout(function () {
-    setOpacity(0);
-  }, 3000);
-}
+const changeTrack = (trackIndex) => {
+  audioPlayer.src = playlist[trackIndex];
+  audioPlayer.play();
+  playButton.src = "assets/images/pause.png";
+  updateUI(trackIndex);
+  resetFadeOutControls();
+};
 
-function setOpacity(opacity) {
-  controlElements.forEach(function (element) {
-    element.style.opacity = opacity.toString();
+const setOpacity = (opacity) => {
+  controlElements.forEach((element) => {
+    if (element) element.style.opacity = String(opacity);
   });
-}
+};
 
-document.addEventListener("mousemove", function () {
-  setOpacity(1); // Make controls visible on mouse move
+let fadeTimer;
+const resetFadeOutControls = () => {
+  clearTimeout(fadeTimer);
+  setOpacity(1);
+  fadeTimer = setTimeout(() => setOpacity(0), 3000);
+};
 
-  // Reset the timer to hide controls after 3 seconds
-  clearTimeout(window.fadeTimer);
-  window.fadeTimer = setTimeout(function () {
-    setOpacity(0);
-  }, 3000);
-});
+document.addEventListener("mousemove", resetFadeOutControls);
 
-playButton.addEventListener("click", function () {
+playButton.addEventListener("click", () => {
   if (audioPlayer.paused) {
-    if (!audioPlayer.src) {
-      changeTrack(currentTrack);
-    } else {
-      audioPlayer.play();
-      playButton.src = "assets/images/pause.png";
-    }
+    if (!audioPlayer.src) changeTrack(currentTrack);
+    else audioPlayer.play();
+    playButton.src = "assets/images/pause.png";
   } else {
     audioPlayer.pause();
     playButton.src = "assets/images/play.png";
   }
+  resetFadeOutControls();
 });
 
-audioPlayer.addEventListener("ended", function () {
+audioPlayer.addEventListener("ended", () => {
   currentTrack = (currentTrack + 1) % playlist.length;
   changeTrack(currentTrack);
 });
 
-nextButton.addEventListener("click", function () {
+document.getElementById("nextButton").addEventListener("click", () => {
   currentTrack = (currentTrack + 1) % playlist.length;
   changeTrack(currentTrack);
 });
 
-prevButton.addEventListener("click", function () {
+document.getElementById("prevButton").addEventListener("click", () => {
   currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
   changeTrack(currentTrack);
 });
+
+resetFadeOutControls();

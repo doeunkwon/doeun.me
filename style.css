@@ -2,7 +2,7 @@ body,
 html {
   height: 100%;
   margin: 0;
-  background-color: black; /* Ensures any space outside the earth-container matches the background */
+  background-color: black;
 }
 
 .container-content {
@@ -10,13 +10,13 @@ html {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centers the earth-container vertically and horizontally */
+  align-items: center;
 }
 
 .earth-container {
   position: relative;
-  width: 100%; /* Use 100% of the .container-content width */
-  height: 100vh; /* Adjust based on your design, this takes the full viewport height */
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,16 +26,16 @@ html {
   position: absolute;
   top: 0;
   height: 100%;
-  object-fit: cover; /* Cover the container without stretching */
-  z-index: 0; /* Ensure it stays as the background */
+  object-fit: cover;
+  z-index: 0;
 }
 
 .info-and-controls {
-  position: relative; /* Centering the content inside the earth-container */
+  position: relative;
   display: flex;
-  flex-direction: column; /* Stack the artist, controls, and track title vertically */
-  align-items: center; /* Center align the child elements */
-  z-index: 1; /* Ensure it's above the background GIF */
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
 }
 
 .track-info.artist,
@@ -50,13 +50,13 @@ html {
 .controls {
   display: flex;
   justify-content: center;
-  gap: 64px; /* Space between control buttons */
+  gap: 64px;
 }
 
 .control-button,
 .play-button {
   cursor: pointer;
-  height: 50px; /* Example size, adjust as needed */
+  height: 50px;
 }
 
 .navbar {
@@ -67,7 +67,7 @@ html {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 2; /* Ensures navbar is always on top */
+  z-index: 2;
   color: white;
   font-size: medium;
 }
@@ -87,4 +87,50 @@ a {
 
 a:hover {
   color: skyblue;
+}
+
+@media (max-width: 375px) {
+  .controls {
+    gap: 32px;
+  }
+
+  .control-button,
+  .play-button {
+    height: 40px;
+  }
+
+  .track-info.artist,
+  .track-info.track {
+    font-size: small;
+    margin: 14px 0;
+  }
+
+  p {
+    line-height: 48px;
+    font-size: large;
+  }
+
+  .navbar a {
+    font-size: small;
+  }
+}
+
+@media (max-width: 320px) {
+  .controls {
+    gap: 24px;
+  }
+
+  .control-button,
+  .play-button {
+    height: 35px;
+  }
+
+  .track-info.artist,
+  .track-info.track {
+    font-size: x-small;
+  }
+
+  .navbar a {
+    font-size: x-small;
+  }
 }
