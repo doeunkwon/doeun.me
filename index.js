@@ -23,6 +23,7 @@ var playlist = [
   "assets/music/RSCL, Repiet, Julia Klejin -- Echo.mp3",
   "assets/music/Stevie Krash, Al Sharif -- The Way (ABGT471).mp3",
   "assets/music/Tiesto -- Drifting.mp3",
+  "assets/music/Julian Calor -- One.mp3",
 ];
 
 function shuffleArray(array) {

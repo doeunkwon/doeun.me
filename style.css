@@ -60,16 +60,17 @@ html {
 }
 
 .navbar {
-  padding: 16px 0;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0; /* Ensure the navbar starts at the left edge */
+  right: 0; /* Ensure the navbar extends to the right edge */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   z-index: 2;
   color: white;
   font-size: medium;
+  padding: 16px 16px; /* Add horizontal padding of 16px */
 }
 
 p {
