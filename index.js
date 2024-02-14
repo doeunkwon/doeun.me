@@ -45,7 +45,8 @@ const controlElements = [
   "playButton",
   "nextButton",
   "trackTitle",
-  "navbar",
+  "navbar-top",
+  "navbar-bottom",
 ].map((id) => document.getElementById(id));
 
 audioPlayer.volume = 0.2;
