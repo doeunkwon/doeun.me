@@ -49,6 +49,7 @@ const controlElements = [
   "navbar-bottom",
 ].map((id) => document.getElementById(id));
 
+console.log(audioPlayer);
 audioPlayer.volume = 0.2;
 
 const updateUI = (trackIndex) => {

@@ -3,8 +3,7 @@ html {
   height: 100%;
   margin: 0;
   background-color: black;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0px 16px;
 }
 
 .container-content {
@@ -17,8 +16,7 @@ html {
 
 .body-container {
   max-width: 55vw;
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 0px;
 }
 
 .earth-container {
@@ -133,10 +131,39 @@ a:hover {
 
 ul {
   list-style-type: square;
+  padding-inline-start: 16px;
+}
+
+.collapsible-btn {
+  cursor: pointer;
+  color: #f2f2f2;
+  font-size: large;
+  font-weight: bold;
+}
+
+.collapsible-btn:hover {
+  color: skyblue;
+}
+
+.collapsible ul {
+  list-style-type: square;
 }
 
 @media (max-width: 600px) {
+  body,
+  html {
+    padding: 0px 4px;
+  }
+
   .body-container {
     max-width: 100vw;
+  }
+
+  .navbar-top {
+    padding: 4px;
+  }
+
+  .navbar-bottom {
+    padding: 4px;
   }
 }
