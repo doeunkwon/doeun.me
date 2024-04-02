@@ -8,22 +8,14 @@ var playlist = [
   "assets/music/Tiesto -- Secrets.mp3",
   "assets/music/Airbase -- Escape - Radio Edit.mp3",
   "assets/music/Tinlicker -- Lost - Edit.mp3",
-  "assets/music/Calvin Harris, Ellie Goulding -- Miracle (with Ellie Goulding).mp3",
   "assets/music/Tinlicker -- Hide U - Tinlicker Remix.mp3",
   "assets/music/Tinlicker -- Fractal.mp3",
   "assets/music/Fred again -- Bleu (better with time).mp3",
   "assets/music/Tinlicker -- Close Your Eyes.mp3",
-  "assets/music/Fejka, Marie Angerer -- Infinity (feat. Marie Angerer).mp3",
   "assets/music/Fred again -- Kammy (like i do).mp3",
-  "assets/music/Gareth Emery -- Friendly Fires.mp3",
   "assets/music/INZO -- Drift Like A Cloud, Flow Like Water.mp3",
-  "assets/music/Kudus, Mirjam Tumaini -- Never Be Alone.mp3",
   "assets/music/Tinlicker -- Children.mp3",
   "assets/music/Robert Miles, Jaques Le Noir -- Princess Of Light - Jaques Le Noir Edit Remix.mp3",
-  "assets/music/RSCL, Repiet, Julia Klejin -- Echo.mp3",
-  "assets/music/Stevie Krash, Al Sharif -- The Way (ABGT471).mp3",
-  "assets/music/Tiesto -- Drifting.mp3",
-  "assets/music/Julian Calor -- One.mp3",
 ];
 
 function shuffleArray(array) {
