@@ -16,6 +16,11 @@ var playlist = [
   "assets/music/INZO -- Drift Like A Cloud, Flow Like Water.mp3",
   "assets/music/Tinlicker -- Children.mp3",
   "assets/music/Robert Miles, Jaques Le Noir -- Princess Of Light - Jaques Le Noir Edit Remix.mp3",
+  "assets/music/Alessandro Pierozzi -- Pretending.mp3",
+  "assets/music/Armin van Buuren, Xoro, Yola Recoba -- God Is In The Soundwaves.mp3",
+  "assets/music/Scorz -- Because Of You.mp3",
+  "assets/music/Stereoclip -- How To Listen To This Album.mp3",
+  "assets/music/Tommy Farrow -- Colours Of Love.mp3",
 ];
 
 function shuffleArray(array) {
