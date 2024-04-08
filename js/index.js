@@ -16,6 +16,7 @@ var playlist = [
   "assets/music/Lapalux -- Amnioverse.mp3",
   "assets/music/Tinlicker, Solomon Grey -- Choir To The Wild.mp3",
   "assets/music/Tom Odell -- Sunrise___.mp3",
+  "assets/music/Weval -- Intro.mp3",
 ];
 
 function shuffleArray(array) {
