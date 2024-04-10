@@ -5,7 +5,6 @@ var playlist = [
   "assets/music/Tinlicker, Run Rivers -- Lost - Edit.mp3",
   "assets/music/Fred again -- Bleu (better with time).mp3",
   "assets/music/Tinlicker, Belle Doron -- Close Your Eyes.mp3",
-  "assets/music/Robert Miles, Jaques Le Noir -- Princess Of Light - Jaques Le Noir Edit Remix.mp3",
   "assets/music/Alessandro Pierozzi -- Pretending.mp3",
   "assets/music/Scorz -- Because Of You.mp3",
   "assets/music/Stereoclip -- How To Listen To This Album.mp3",
@@ -17,6 +16,10 @@ var playlist = [
   "assets/music/Tinlicker, Solomon Grey -- Choir To The Wild.mp3",
   "assets/music/Tom Odell -- Sunrise___.mp3",
   "assets/music/Weval -- Intro.mp3",
+  "assets/music/Eli & Fur, Marsh -- Wild Skies - Marsh Remix.mp3",
+  "assets/music/LF SYSTEM -- Afraid To Feel.mp3",
+  "assets/music/Peggy Gou -- (It Goes Like) Nanana - Edit.mp3",
+  "assets/music/Weval -- Gimme Some.mp3",
 ];
 
 function shuffleArray(array) {
