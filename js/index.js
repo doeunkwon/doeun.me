@@ -20,6 +20,10 @@ var playlist = [
   "assets/music/LF SYSTEM -- Afraid To Feel.mp3",
   "assets/music/Peggy Gou -- (It Goes Like) Nanana - Edit.mp3",
   "assets/music/Weval -- Gimme Some.mp3",
+  "assets/music/Hania Rani -- Glass.mp3",
+  "assets/music/Jóhann Jóhannsson -- Odi et Amo - bis - Remastered.mp3",
+  "assets/music/Khruangbin -- White Gloves.mp3",
+  "assets/music/Khruangbin, Leon Bridges -- Chocolate Hills.mp3",
 ];
 
 function shuffleArray(array) {
