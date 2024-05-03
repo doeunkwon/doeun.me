@@ -5,8 +5,6 @@ var playlist = [
   "assets/music/Tinlicker, Run Rivers -- Lost - Edit.mp3",
   "assets/music/Fred again -- Bleu (better with time).mp3",
   "assets/music/Tinlicker, Belle Doron -- Close Your Eyes.mp3",
-  "assets/music/Alessandro Pierozzi -- Pretending.mp3",
-  "assets/music/Scorz -- Because Of You.mp3",
   "assets/music/Stereoclip -- How To Listen To This Album.mp3",
   "assets/music/Jóhann Jóhannsson -- Já, Hemmi Minn - From „Dís“ Soundtrack.mp3",
   "assets/music/Jóhann Jóhannsson, Jonas Colstrup -- My Blood Wants to Cry.mp3",
@@ -15,15 +13,15 @@ var playlist = [
   "assets/music/Lapalux -- Amnioverse.mp3",
   "assets/music/Tinlicker, Solomon Grey -- Choir To The Wild.mp3",
   "assets/music/Tom Odell -- Sunrise___.mp3",
-  "assets/music/Weval -- Intro.mp3",
   "assets/music/Eli & Fur, Marsh -- Wild Skies - Marsh Remix.mp3",
   "assets/music/LF SYSTEM -- Afraid To Feel.mp3",
   "assets/music/Peggy Gou -- (It Goes Like) Nanana - Edit.mp3",
-  "assets/music/Weval -- Gimme Some.mp3",
   "assets/music/Hania Rani -- Glass.mp3",
   "assets/music/Jóhann Jóhannsson -- Odi et Amo - bis - Remastered.mp3",
   "assets/music/Khruangbin -- White Gloves.mp3",
   "assets/music/Khruangbin, Leon Bridges -- Chocolate Hills.mp3",
+  "assets/music/Porter Robinson -- Get Your Wish.mp3",
+  "assets/music/Porter Robinson -- Goodbye To A World.mp3",
 ];
 
 function shuffleArray(array) {
