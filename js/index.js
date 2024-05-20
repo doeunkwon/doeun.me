@@ -1,27 +1,24 @@
 var playlist = [
-  "assets/music/Alessandro Pierozzi -- World Of Sound.mp3",
   "assets/music/alt-J, Tinlicker -- Breezeblocks - Tinlicker Remix.mp3",
   "assets/music/Airbase -- Escape - Radio Edit.mp3",
-  "assets/music/Tinlicker, Run Rivers -- Lost - Edit.mp3",
   "assets/music/Fred again -- Bleu (better with time).mp3",
   "assets/music/Tinlicker, Belle Doron -- Close Your Eyes.mp3",
-  "assets/music/Stereoclip -- How To Listen To This Album.mp3",
   "assets/music/Jóhann Jóhannsson -- Já, Hemmi Minn - From „Dís“ Soundtrack.mp3",
-  "assets/music/Jóhann Jóhannsson, Jonas Colstrup -- My Blood Wants to Cry.mp3",
   "assets/music/Jóhann Jóhannsson, Jonas Colstrup -- Unspoken Admiration.mp3",
   "assets/music/Jóhann Jóhannsson, Víkingur Ólafsson -- Flight from the City - Víkingur Ólafsson Rework.mp3",
   "assets/music/Lapalux -- Amnioverse.mp3",
   "assets/music/Tinlicker, Solomon Grey -- Choir To The Wild.mp3",
   "assets/music/Tom Odell -- Sunrise___.mp3",
   "assets/music/Eli & Fur, Marsh -- Wild Skies - Marsh Remix.mp3",
-  "assets/music/LF SYSTEM -- Afraid To Feel.mp3",
-  "assets/music/Peggy Gou -- (It Goes Like) Nanana - Edit.mp3",
-  "assets/music/Hania Rani -- Glass.mp3",
   "assets/music/Jóhann Jóhannsson -- Odi et Amo - bis - Remastered.mp3",
-  "assets/music/Khruangbin -- White Gloves.mp3",
-  "assets/music/Khruangbin, Leon Bridges -- Chocolate Hills.mp3",
   "assets/music/Porter Robinson -- Get Your Wish.mp3",
   "assets/music/Porter Robinson -- Goodbye To A World.mp3",
+  "assets/music/Jóhann Jóhannsson -- Ruslpóstur - From „Dís“ Soundtrack.mp3",
+  "assets/music/Jóhann Jóhannsson -- The Sun's Gone Dim and the Sky's Turned Black.mp3",
+  "assets/music/Porter Robinson -- Something Comforting.mp3",
+  "assets/music/Tom Odell -- ___Sunset.mp3",
+  "assets/music/Virtual Self -- Ghost Voices.mp3",
+  "assets/music/Virtual Self -- Particle Arts.mp3"
 ];
 
 function shuffleArray(array) {
