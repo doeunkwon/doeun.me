@@ -6,6 +6,10 @@ html {
   padding: 0px 16px;
 }
 
+body.player-mode .player-navbar {
+  display: none;
+}
+
 .container-content {
   font-family: "Press Start 2P", sans-serif;
   min-height: 100%;

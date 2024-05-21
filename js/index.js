@@ -18,7 +18,9 @@ var playlist = [
   "assets/music/Porter Robinson -- Something Comforting.mp3",
   "assets/music/Tom Odell -- ___Sunset.mp3",
   "assets/music/Virtual Self -- Ghost Voices.mp3",
-  "assets/music/Virtual Self -- Particle Arts.mp3"
+  "assets/music/Virtual Self -- Particle Arts.mp3",
+  "assets/music/Jóhann Jóhannsson -- Gúmmískór - From „Dís“ Soundtrack.mp3",
+  "assets/music/Virtual Self -- a.i.ngel (Become God).mp3"
 ];
 
 function shuffleArray(array) {
