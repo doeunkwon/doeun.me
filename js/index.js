@@ -1,24 +1,8 @@
 var playlist = [
-  "assets/music/alt-J, Tinlicker -- Breezeblocks - Tinlicker Remix.mp3",
-  "assets/music/Airbase -- Escape - Radio Edit.mp3",
-  "assets/music/Tinlicker, Belle Doron -- Close Your Eyes.mp3",
-  "assets/music/Jóhann Jóhannsson -- Já, Hemmi Minn - From „Dís“ Soundtrack.mp3",
-  "assets/music/Jóhann Jóhannsson, Jonas Colstrup -- Unspoken Admiration.mp3",
-  "assets/music/Tinlicker, Solomon Grey -- Choir To The Wild.mp3",
-  "assets/music/Tom Odell -- Sunrise___.mp3",
-  "assets/music/Eli & Fur, Marsh -- Wild Skies - Marsh Remix.mp3",
-  "assets/music/Porter Robinson -- Get Your Wish.mp3",
-  "assets/music/Porter Robinson -- Goodbye To A World.mp3",
-  "assets/music/Jóhann Jóhannsson -- Ruslpóstur - From „Dís“ Soundtrack.mp3",
-  "assets/music/Porter Robinson -- Something Comforting.mp3",
-  "assets/music/Virtual Self -- Ghost Voices.mp3",
-  "assets/music/Virtual Self -- Particle Arts.mp3",
-  "assets/music/Virtual Self -- a.i.ngel (Become God).mp3",
-  "assets/music/Jóhann Jóhannsson -- Gúmmískór - From „Dís“ Soundtrack.mp3",
-  "assets/music/No Mana -- City2City.mp3",
-  "assets/music/No Mana, Feed Me, Bertie Scott -- Hopeless.mp3",
-  "assets/music/No Mana, vowl., Leyla Diamondi -- Falling in Love.mp3",
-  "assets/music/Porter Robinson -- Everything Goes On.mp3"
+  "assets/music/06.09.24 -- BioBloom.mp3",
+  "assets/music/06.09.24 -- CHROM-atic_4BERR0R.mp3",
+  "assets/music/06.09.24 -- Dreamscape.mp3",
+  "assets/music/06.09.24 -- Illusory Eden.mp3"
 ];
 
 function shuffleArray(array) {
@@ -35,11 +19,11 @@ let currentTrack = 0;
 const audioPlayer = document.getElementById("audioPlayer");
 const playButton = document.getElementById("playButton");
 const controlElements = [
-  "artistName",
+  "trackTitle",
   "prevButton",
   "playButton",
   "nextButton",
-  "trackTitle",
+  "trackDate",
   "navbar-top",
   "navbar-bottom",
 ].map((id) => document.getElementById(id));
@@ -49,12 +33,12 @@ audioPlayer.volume = 0.2;
 
 const updateUI = (trackIndex) => {
   const trackDetails = playlist[trackIndex].split("/")[2];
-  const [artistName, trackTitle] = trackDetails
+  const [trackDate, trackTitle] = trackDetails
     .split(" -- ")
     .map((part) => part.split(".mp3")[0]);
 
-  document.getElementById("artistName").textContent = artistName;
   document.getElementById("trackTitle").textContent = trackTitle;
+  document.getElementById("trackDate").textContent = trackDate;
 };
 
 const changeTrack = (trackIndex) => {

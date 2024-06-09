@@ -23,7 +23,7 @@ body.player-mode .player-navbar {
   padding: 96px 0px;
 }
 
-.earth-container {
+.music-container {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -32,9 +32,8 @@ body.player-mode .player-navbar {
   align-items: center;
 }
 
-.earth-gif {
+.music-gif {
   position: fixed;
-  height: 100%;
   width: 100%;
   object-fit: contain;
   z-index: 0;
@@ -48,8 +47,7 @@ body.player-mode .player-navbar {
   z-index: 1;
 }
 
-.track-info.artist,
-.track-info.track {
+.track-info {
   color: #f2f2f2;
   font-family: "Press Start 2P", sans-serif;
   font-size: medium;
@@ -130,7 +128,7 @@ a {
 }
 
 a:hover {
-  color: skyblue;
+  color: darkgray;
 }
 
 ul {
@@ -146,7 +144,7 @@ ul {
 }
 
 .collapsible-btn:hover {
-  color: skyblue;
+  color: darkgray;
 }
 
 .collapsible ul {
