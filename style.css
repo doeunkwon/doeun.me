@@ -189,3 +189,7 @@ ul {
   cursor: pointer;
   font-size: 24px;
 }
+
+#changeImageButton:hover {
+  color: darkgray;
+}
