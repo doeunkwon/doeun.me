@@ -22,14 +22,21 @@ function shufflePlaylist(playlist) {
   return playlist;
 }
 
-let currentImageIndex = 0;
+function pickRandomAnimation() {
+  return Math.floor(Math.random() * animations.length);
+}
+
+let currentImageIndex = pickRandomAnimation();
 
 function changeImage() {
   currentImageIndex = (currentImageIndex + 1) % animations.length;
   document.getElementById("animation").src = animations[currentImageIndex];
 }
 
-window.onload = changeImage;
+window.onload = function() {
+  currentImageIndex = pickRandomAnimation();
+  changeImage();
+};
 
 const changeButton = document.getElementById("changeImageButton");
 changeButton.addEventListener("click", changeImage);
