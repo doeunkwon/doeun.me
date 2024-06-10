@@ -5,15 +5,36 @@ var playlist = [
   "assets/music/06.09.24 -- Illusory Eden.mp3"
 ];
 
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
+var animations = [
+  "assets/images/04-18-18.gif",
+  "assets/images/05-12-22.gif",
+  "assets/images/05-24-24.gif",
+  "assets/images/05-26-23.gif",
+]
+
+function shufflePlaylist(playlist) {
+  for (let i = playlist.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    [playlist[i], playlist[j]] = [playlist[j], playlist[i]]; // Swap elements
   }
-  return array;
+  return playlist;
 }
 
-playlist = shuffleArray(playlist);
+let currentImageIndex = 0;
+
+function changeImage() {
+  currentImageIndex = (currentImageIndex + 1) % animations.length;
+  document.getElementById("animation").src = animations[currentImageIndex];
+}
+
+window.onload = changeImage;
+
+const changeButton = document.getElementById("changeImageButton");
+changeButton.addEventListener("click", changeImage);
+
+playlist = shufflePlaylist(playlist);
+
+
 
 let currentTrack = 0;
 const audioPlayer = document.getElementById("audioPlayer");
@@ -28,7 +49,6 @@ const controlElements = [
   "navbar-bottom",
 ].map((id) => document.getElementById(id));
 
-console.log(audioPlayer);
 audioPlayer.volume = 0.2;
 
 const updateUI = (trackIndex) => {
@@ -44,7 +64,7 @@ const updateUI = (trackIndex) => {
 const changeTrack = (trackIndex) => {
   audioPlayer.src = playlist[trackIndex];
   audioPlayer.play();
-  playButton.src = "assets/images/pause.png";
+  playButton.src = "assets/images/pause-circle-fill.png";
   updateUI(trackIndex);
   resetFadeOutControls();
 };
@@ -68,10 +88,10 @@ playButton.addEventListener("click", () => {
   if (audioPlayer.paused) {
     if (!audioPlayer.src) changeTrack(currentTrack);
     else audioPlayer.play();
-    playButton.src = "assets/images/pause.png";
+    playButton.src = "assets/images/pause-circle-fill.png";
   } else {
     audioPlayer.pause();
-    playButton.src = "assets/images/play.png";
+    playButton.src = "assets/images/play-circle-fill.png";
   }
   resetFadeOutControls();
 });
