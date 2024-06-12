@@ -4,7 +4,8 @@ var playlist = [
   "assets/music/06.09.24 -- Dreamscape.mp3",
   "assets/music/06.09.24 -- Illusory Eden.mp3",
   "assets/music/06.09.24 -- VIRAL ELEGY.mp3",
-  "assets/music/06.09.24 -- NeU.R0.N.o.V.A.mp3"
+  "assets/music/06.09.24 -- NeU.R0.N.o.V.A.mp3",
+  "assets/music/06.11.24 -- (Virus = Love).mp3"
 ];
 
 var animations = [
