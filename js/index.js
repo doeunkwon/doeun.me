@@ -1,50 +1,20 @@
 var playlist = [
+  "assets/music/06.11.24 -- (Virus = Love).mp3",
   "assets/music/06.09.24 -- BioBloom.mp3",
   "assets/music/06.09.24 -- CHROM-atic_4BERR0R.mp3",
   "assets/music/06.09.24 -- Dreamscape.mp3",
-  "assets/music/06.09.24 -- Illusory Eden.mp3",
   "assets/music/06.09.24 -- VIRAL ELEGY.mp3",
-  "assets/music/06.09.24 -- NeU.R0.N.o.V.A.mp3",
-  "assets/music/06.11.24 -- (Virus = Love).mp3"
 ];
 
-var animations = [
-  "assets/images/04-18-18.gif",
-  "assets/images/05-12-22.gif",
-  "assets/images/05-24-24.gif",
-  "assets/images/05-26-23.gif",
-]
+// function shufflePlaylist(playlist) {
+//   for (let i = playlist.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     [playlist[i], playlist[j]] = [playlist[j], playlist[i]]; // Swap elements
+//   }
+//   return playlist;
+// }
 
-function shufflePlaylist(playlist) {
-  for (let i = playlist.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [playlist[i], playlist[j]] = [playlist[j], playlist[i]]; // Swap elements
-  }
-  return playlist;
-}
-
-function pickRandomAnimation() {
-  return Math.floor(Math.random() * animations.length);
-}
-
-let currentImageIndex = pickRandomAnimation();
-
-function changeImage() {
-  currentImageIndex = (currentImageIndex + 1) % animations.length;
-  document.getElementById("animation").src = animations[currentImageIndex];
-}
-
-window.onload = function() {
-  currentImageIndex = pickRandomAnimation();
-  changeImage();
-};
-
-const changeButton = document.getElementById("changeImageButton");
-changeButton.addEventListener("click", changeImage);
-
-playlist = shufflePlaylist(playlist);
-
-
+// playlist = shufflePlaylist(playlist);
 
 let currentTrack = 0;
 const audioPlayer = document.getElementById("audioPlayer");

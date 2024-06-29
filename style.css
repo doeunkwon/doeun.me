@@ -181,17 +181,3 @@ ul {
     padding: 4px;
   }
 }
-
-#changeImageButton {
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-#changeImageButton:hover {
-  color: darkgray;
-}
