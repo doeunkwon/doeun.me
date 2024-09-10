@@ -1,8 +1,7 @@
 var playlist = [
+  "assets/music/09.09.24 -- 777Lucky Seven777.mp3",
   "assets/music/06.11.24 -- (Virus = Love).mp3",
-  "assets/music/06.09.24 -- BioBloom.mp3",
-  "assets/music/06.09.24 -- CHROM-atic_4BERR0R.mp3",
-  "assets/music/06.09.24 -- Dreamscape.mp3",
+  "assets/music/06.09.24 -- Pascal's Pattern.mp3",
   "assets/music/06.09.24 -- VIRAL ELEGY.mp3",
 ];
 
