@@ -1,9 +1,9 @@
 var playlist = [
-  "assets/music/09.09.24 -- 777Lucky Seven777.mp3",
-  "assets/music/06.11.24 -- V&L.mp3",
-  "assets/music/09.10.24 -- Ⅻth Hour.mp3",
-  "assets/music/06.09.24 -- Pascal's Pattern.mp3",
-  "assets/music/06.09.24 -- VIRAL ELEGY.mp3",
+  "assets/music/4_min_samples -- track_1.mp3",
+  "assets/music/4_min_samples -- track_2.mp3",
+  "assets/music/4_min_samples -- track_3.mp3",
+  "assets/music/4_min_samples -- track_4.mp3",
+  "assets/music/4_min_samples -- track_5.mp3",
 ];
 
 // function shufflePlaylist(playlist) {
