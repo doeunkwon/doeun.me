@@ -4,6 +4,8 @@ var playlist = [
   "assets/music/4_min_samples -- track_3.mp3",
   "assets/music/4_min_samples -- track_4.mp3",
   "assets/music/4_min_samples -- track_5.mp3",
+  "assets/music/4_min_samples -- track_6.mp3",
+  "assets/music/4_min_samples -- track_7.mp3",
 ];
 
 // function shufflePlaylist(playlist) {
