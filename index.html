@@ -8,14 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <title>music</title>
+    <title>doeun.me</title>
   </head>
   <body>
     <div class="container-content">
-      <div class="navbar-top player-navbar" id="navbar-top">
-        <a style="color: darkgray" href="index.html">music</a>
-        <a href="about.html">about</a>
-      </div>  
       <div class="music-container">
         <img id="animation" src="assets/images/05-24-24.gif" class="music-gif" />
         <div class="info-and-controls">
@@ -44,11 +40,27 @@
         </div>
         <audio id="audioPlayer"></audio>
       </div>
-      <div class="navbar-bottom player-navbar" id="navbar-bottom">
-        <a href="contact.html">contact</a>
-      </div>  
     </div>
+    
     <script src="js/utils.js"></script>    
     <script src="js/index.js"></script>
+    <div class="container-content">
+      <div class="body-container">
+        <h2>Hi, I'm Doeun.</h2>
+        <p>
+          Vancouver-based developer, focused on consumer app development. Latest project: <a href="https://convo.today/" style="text-decoration: underline" target="_blank">Convo</a>, an AI-powered social skills app. Check out my work on <a href="https://github.com/doeunkwon?tab=repositories" style="text-decoration: underline" target="_blank">GitHub</a> or email me at <a href="mailto:dekwooon@gmail.com" style="text-decoration: underline" target="_blank">dekwooon@gmail.com</a>.
+        </p>
+        <p>
+          Born in Seoul, South Korea. Grew up in Prince Edward Island, Canada. Lived <span id="age-display"></span> days.
+        </p>
+        <p>
+          Enjoy outdoor activities, exercise, and good music.
+        </p>
+        <p>
+          Passionate about discussing work with others and turning ideas into products. Proficient in Python, Go, TypeScript, and Swift.
+        </p>
+      </div>
+    </div>
+    <script src="js/about.js"></script>
   </body>
 </html>
