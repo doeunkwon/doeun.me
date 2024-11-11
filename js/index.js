@@ -8,46 +8,23 @@ var playlist = [
   "assets/music/4_min_samples -- track_7.mp3",
 ];
 
-// function shufflePlaylist(playlist) {
-//   for (let i = playlist.length - 1; i > 0; i--) {
-//     const j = Math.floor(Math.random() * (i + 1));
-//     [playlist[i], playlist[j]] = [playlist[j], playlist[i]]; // Swap elements
-//   }
-//   return playlist;
-// }
-
-// playlist = shufflePlaylist(playlist);
-
 let currentTrack = 0;
 const audioPlayer = document.getElementById("audioPlayer");
 const playButton = document.getElementById("playButton");
 const controlElements = [
-  "trackTitle",
   "prevButton",
   "playButton",
   "nextButton",
-  "trackDate",
   "navbar-top",
   "navbar-bottom",
 ].map((id) => document.getElementById(id));
 
 audioPlayer.volume = 0.2;
 
-const updateUI = (trackIndex) => {
-  const trackDetails = playlist[trackIndex].split("/")[2];
-  const [trackDate, trackTitle] = trackDetails
-    .split(" -- ")
-    .map((part) => part.split(".mp3")[0]);
-
-  document.getElementById("trackTitle").textContent = trackTitle;
-  document.getElementById("trackDate").textContent = trackDate;
-};
-
 const changeTrack = (trackIndex) => {
   audioPlayer.src = playlist[trackIndex];
   audioPlayer.play();
   playButton.src = "assets/images/pause-circle-fill.png";
-  updateUI(trackIndex);
   resetFadeOutControls();
 };
 

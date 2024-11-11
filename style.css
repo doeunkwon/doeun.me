@@ -56,14 +56,6 @@ body.player-mode .player-navbar {
   z-index: 1;
 }
 
-.track-info {
-  color: #f2f2f2;
-  font-family: "Arial", sans-serif;
-  font-size: 24px;
-  text-align: center;
-  margin: px 0;
-}
-
 .controls {
   display: flex;
   justify-content: center;
