@@ -1,17 +1,11 @@
-:root {
-  --foreground-color: #e2e2e2;
-  --accent-color: lime;
-  --background-color: #000;
-}
-
 html,
 body {
-  background-color: var(--background-color);
-  color: var(--foreground-color);
+  background-color: black;
+  color: white;
 }
 
 a {
-  color: var(--accent-color);
+  color: lime;
 }
 
 p {
@@ -32,5 +26,5 @@ p {
 }
 
 #particle-system-container canvas {
-  border: 1px solid var(--foreground-color);
+  border: 1px solid white;
 }
