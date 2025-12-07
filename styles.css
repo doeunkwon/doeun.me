@@ -1,0 +1,36 @@
+:root {
+  --foreground-color: #e2e2e2;
+  --accent-color: lime;
+  --background-color: #000;
+}
+
+html,
+body {
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+}
+
+a {
+  color: var(--accent-color);
+}
+
+p {
+  margin: 0;
+}
+
+#menu {
+  float: right;
+  width: 100px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  float: left;
+  width: 500px;
+}
+
+#particle-system-container canvas {
+  border: 1px solid var(--foreground-color);
+}
