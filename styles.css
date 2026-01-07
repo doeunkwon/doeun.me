@@ -1,0 +1,30 @@
+html,
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: lime;
+}
+
+p {
+  margin: 0;
+}
+
+#menu {
+  float: right;
+  width: 100px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  float: left;
+  width: 500px;
+}
+
+#particle-system-container canvas {
+  border: 1px solid white;
+}
