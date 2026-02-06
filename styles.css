@@ -1,0 +1,26 @@
+html,
+body {
+  background-color: black;
+  color: lightgray;
+}
+
+a {
+  color: greenyellow;
+}
+
+p {
+  margin: 0;
+}
+
+#menu {
+  float: right;
+  width: 100px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  float: left;
+  width: 500px;
+}
